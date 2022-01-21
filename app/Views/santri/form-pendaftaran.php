@@ -1,7 +1,9 @@
 <?= $this->extend('layouts/main-test'); ?>
 <?= $this->Section('content'); ?>
 <div class="col-lg-8">
-    <form action="" method="post">
+    <form action="" method="post"  id="formSantri">
+        <div class="tab-content">
+    <div class="tab-pane fade show active" id="step_1" role="tabpanel" >
         <div class="row mb-3">
             <div class="col-md">
                 <label for="" class="form-label">Nama</label>
@@ -44,6 +46,9 @@
                 </div>
             </div>
         </div>
+
+        </div> <!-- step-1 -->
+        <div class="tab-pane fade " id="step_2" role="tabpanel" >
         <div class="py-4"><span class="border-top d-block"></span></div>
         <div class="row g-4 mb-3">
             <div class="col-md">
@@ -85,6 +90,8 @@
                 <input type="text" class="form-control" name="golongan_darah" id="">
             </div>
         </div>
+        </div> <!-- step-2 -->
+        <div class="tab-pane fade" id="step_3" role="tabpanel" >
         <div class="py-4"><span class="border-top d-block"></span></div>
         <div class="row ">
             <div class="col-md mb-3">
@@ -116,6 +123,8 @@
                 <input type="text" class="form-control" name="kode_pos" id="">
             </div>
         </div>
+        </div> <!-- step 3 -->
+        <div class="tab-pane fade" id="step_4" role="tabpanel" >
         <div class="py-4"><span class="border-top d-block"></span></div>
         <div class="row g-4 mb-3">
             <div class="col-md">
@@ -149,6 +158,8 @@
                 </div>
             </div>
         </div>
+        </div> <!-- step 4 -->
+        <div class="tab-pane fade" id="step_5" role="tabpanel" >
         <div class="py-4"><span class="border-top d-block"></span></div>
         <div class="row g-4 mb-3">
             <div class="col-md">
@@ -201,8 +212,9 @@
                     </label>
                 </div>
             </div>
-
         </div>
+        </div> <!-- step 5 -->
+        <div class="tab-pane fade" id="step_6" role="tabpanel" >
         <div class="py-4"><span class="border-top d-block"></span></div>
          <!-- KK //-->
         <div class="row g-4 mb-3">
@@ -212,6 +224,8 @@
                 <small id="helpId" class="form-text text-muted">Nomer yang ada pada Lembaran KK (posisi dibawah judul Kartu keluarga )</small>
             </div>
         </div>
+        </div> <!-- step 6 -->
+        <div class="tab-pane fade" id="step_7" role="tabpanel" >
         <div class="py-4"><span class="border-top d-block"></span></div>
         <!-- ayah //-->
         <div class="row g-4 mb-3">
@@ -254,6 +268,8 @@
                 <input type="text" class="form-control" name="pekerjaan_ayah" id="" aria-describedby="helpId" placeholder="">
             </div>
         </div>
+        </div> <!-- step 7 -->
+        <div class="tab-pane fade" id="step_8" role="tabpanel" >
         <div class="py-4"><span class="border-top d-block"></span></div>
         <!-- ibu //  -->
         <div class="row g-4 mb-3">
@@ -296,6 +312,30 @@
                 <input type="text" class="form-control" name="pekerjaan_ibu" id="" aria-describedby="helpId" placeholder="">
             </div>
         </div>
+        </div> <!-- step 8 -->
+        </div> <!-- end tab content -->
     </form>
+    <div class="py-4"><span class="border-top d-block"></span></div>
+   
 </div>
+
+<button class="btn btn-warning" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#step_2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Selanjutnya</button>
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#step_2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">..1.</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.2..</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">..3.</div>
+</div>
+
 <?= $this->endSection(); ?>

@@ -14,6 +14,7 @@
     <script src="<?= base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/axios.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
+ 
     <script src="<?= base_url(); ?>/assets/js/bouncer.polyfills.min.js"></script>
 <body class="bg-light">
 <?php // = $this->include('layouts/header'); ?>
@@ -40,6 +41,8 @@
     <?= $this->include('layouts/footer'); ?>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <script src="<?= base_url(); ?>/assets/js/sweetalert2.all.min.js"></script>
 <script src="<?= base_url(); ?>/assets/js/feather.min.js"></script>
 <script src="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
