@@ -12,7 +12,7 @@
     <link href="<?= base_url(); ?>/assets/css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <script src="<?= base_url(); ?>/assets/js/axios.min.js"></script>
-    <script src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/bouncer.polyfills.min.js"></script>
 <body class="bg-light">
 <?= $this->include('layouts/header'); ?>

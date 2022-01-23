@@ -12,4 +12,8 @@ class Pendaftaran extends BaseController
         //
         return view('santri/form-pendaftaran');
     }
+
+    public function step(){
+        return view('santri/form-santri');
+    }
 }

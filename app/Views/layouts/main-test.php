@@ -12,10 +12,8 @@
     <link href="<?= base_url(); ?>/assets/css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <script src="<?= base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="<?= base_url(); ?>/assets/js/axios.min.js"></script>
-    <script src="<?= base_url(); ?>/assets/js/bootstrap.min.js"></script>
- 
-    <script src="<?= base_url(); ?>/assets/js/bouncer.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <body class="bg-light">
 <?php // = $this->include('layouts/header'); ?>
 <div class="container-fluid">
@@ -23,26 +21,20 @@
    <!-- Sidebar --> 
    <?php  // = $this->include('layouts/sidebar'); ?>
    <!-- end sidebar -->
-    <main id="app" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main id="app" >
        <!--  page title -->
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2"><?php
-      /*   if($judul){
-          echo $judul;
-        }else{
-        }  */?></h1>
+      <div class="container">
+      <?= $this->renderSection('content'); ?>
       </div>
-      <!-- endpagetitle -->
-        <!--ini content--> 
-        <?= $this->renderSection('content'); ?>
-       <!--  end content -->
-      
     </main>
     <?= $this->include('layouts/footer'); ?>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <script src="<?= base_url(); ?>/assets/js/axios.min.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/bootstrap.bundle.min.js"></script>
+ 
+    <script src="<?= base_url(); ?>/assets/js/bouncer.polyfills.min.js"></script>
 <script src="<?= base_url(); ?>/assets/js/sweetalert2.all.min.js"></script>
 <script src="<?= base_url(); ?>/assets/js/feather.min.js"></script>
 <script src="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>

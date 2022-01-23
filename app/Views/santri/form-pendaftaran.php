@@ -4,6 +4,7 @@
     <form action="" method="post" id="formSantri">
         <div class="tab-content d-flex flex-column justify-content-center vh-100 py-5"  id="tabForm">
             <div class="tab-pane fade show active" id="step_1" role="tabpanel">
+                <h4 class="text-muted"><span>1</span> Data diri</h4>
                 <div class="row mb-3">
                     <div class="col-md">
                         <label for="" class="form-label">Nama</label>
@@ -36,21 +37,34 @@
                         <label for="" class="form-label">Jenis Kelamin</label>
                         <div class="d-flex align-items-center bg-primary bg-opacity-10 py-1 px-2 rounded">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="janis_kelamin" id="laki" value="laki-laki">
+                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="laki" value="laki-laki">
                                 <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="janis_kelamin" id="laki" value="perempuan">
+                                <input class="form-check-input" type="radio" name="jenis_kelamin" id="laki" value="perempuan">
                                 <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                             </div>
                         </div>
                     </div>
                 </div>
-               
+                <div class="row g-4 mb-3">
+                    <div class="col-md">
+                        <label for="" class="form-label">No Hp Orang Tua</label>
+                        <input type="text" class="form-control" name="hp_orng_tua" id="">
+                        <small id="helpId" class="form-text text-muted">No HP orang tua yang dapat di hubungi</small>
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="form-label">email</label>
+                        <input type="text" class="form-control" name="email" id="">
+                        <small id="helpId" class="form-text text-muted">Email aktif yang dapat di hubungi</small>
+                    </div>
+                </div>
+                <div class="py-4"><span class="border-top d-block"></span></div>
                     <a id="firstStep" class="btn btn-primary btn-next btnNext"> Selanjutnya</a>
             
             </div> <!-- step-1 -->
             <div class="tab-pane fade " id="step_2" role="tabpanel">
+            <h4 class="text-muted"><span>2</span> Data Pribadi</h4>
                 <div class="row g-4 mb-3">
                     <div class="col-md">
                         <label for="" class="form-label">Hobi</label>
@@ -91,11 +105,12 @@
                         <input type="text" class="form-control" name="golongan_darah" id="">
                     </div>
                 </div>
-                    <a id="prev_1" class="btn btn-warning btnPrev">Sebelumnya</a>
+                <div class="py-4"><span class="border-top d-block"></span></div>
+                    <a id="prev_1" class="btn btn-secondary btnPrev">Sebelumnya</a>
                     <a id="next_3" class="btn btn-primary btnNext">Selanjutnya</a>
             </div> <!-- step-2 -->
             <div class="tab-pane fade" id="step_3" role="tabpanel">
-                <div class="py-4"><span class="border-top d-block"></span></div>
+            <h4 class="text-muted"><span>3</span> Alamat</h4>
                 <div class="row ">
                     <div class="col-md mb-3">
                         <label for="" class="form-label">Alamat Lengkap</label>
@@ -126,25 +141,14 @@
                         <input type="text" class="form-control" name="kode_pos" id="">
                     </div>
                 </div>
-            
-                    <a id="prev_2" class="btn btn-warning btnPrev">Sebelumnya</a>
+                <div class="py-4"><span class="border-top d-block"></span></div>
+                    <a id="prev_2" class="btn btn-secondary btnPrev">Sebelumnya</a>
                     <a id="next_4" class="btn btn-primary btnNext">Selanjutnya</a>
               
             </div> <!-- step 3 -->
             <div class="tab-pane fade" id="step_4" role="tabpanel">
-                <div class="py-4"><span class="border-top d-block"></span></div>
-                <div class="row g-4 mb-3">
-                    <div class="col-md">
-                        <label for="" class="form-label">No Hp Orang Tua</label>
-                        <input type="text" class="form-control" name="hp_orng_tua" id="">
-                        <small id="helpId" class="form-text text-muted">No HP orang tua yang dapat di hubungi</small>
-                    </div>
-                    <div class="col-md">
-                        <label for="" class="form-label">email</label>
-                        <input type="text" class="form-control" name="email" id="">
-                        <small id="helpId" class="form-text text-muted">Email aktif yang dapat di hubungi</small>
-                    </div>
-                </div>
+            <h4 class="text-muted"><span>4</span> sekolah Asal</h4>
+
                 <div class="row g-4 mb-3">
                     <div class="col-md">
                         <label for="" class="form-label">Nama Sekolah Asal</label>
@@ -165,13 +169,13 @@
                         </div>
                     </div>
                 </div>
- 
-                    <a id="prev_3" class="btn btn-warning btnPrev">Sebelumnya</a>
+                <div class="py-4"><span class="border-top d-block"></span></div>
+                    <a id="prev_3" class="btn btn-secondary btnPrev">Sebelumnya</a>
                     <a id="next_5" class="btn btn-primary btnNext">Selanjutnya</a>
 
             </div> <!-- step 4 -->
             <div class="tab-pane fade" id="step_5" role="tabpanel">
-                <div class="py-4"><span class="border-top d-block"></span></div>
+            <h4 class="text-muted"><span>5</span> Data sekola Asal</h4>
                 <div class="row g-4 mb-3">
                     <div class="col-md">
                         <label for="" class="form-label">NPSN</label>
@@ -224,13 +228,13 @@
                         </div>
                     </div>
                 </div>
-             
-                    <a id="prev_4" class="btn btn-warning btnPrev">Sebelumnya</a>
+                <div class="py-4"><span class="border-top d-block"></span></div>
+                    <a id="prev_4" class="btn btn-secondary btnPrev">Sebelumnya</a>
                     <a id="next_6" class="btn btn-primary btnNext">Selanjutnya</a>
                
             </div> <!-- step 5 -->
             <div class="tab-pane fade" id="step_6" role="tabpanel">
-                <div class="py-4"><span class="border-top d-block"></span></div>
+            <h4 class="text-muted"><span>6</span> KK</h4>
                 <!-- KK //-->
                 <div class="row g-4 mb-3">
                     <div class="col-md">
@@ -239,13 +243,13 @@
                         <small id="helpId" class="form-text text-muted">Nomer yang ada pada Lembaran KK (posisi dibawah judul Kartu keluarga )</small>
                     </div>
                 </div>
-          
-                    <a id="prev_5" class="btn btn-warning btnPrev">Sebelumnya</a>
+                <div class="py-4"><span class="border-top d-block"></span></div>
+                    <a id="prev_5" class="btn btn-secondary btnPrev">Sebelumnya</a>
                     <a id="next_7" class="btn btn-primary btnNext">Selanjutnya</a>
             
             </div> <!-- step 6 -->
             <div class="tab-pane fade" id="step_7" role="tabpanel">
-                <div class="py-4"><span class="border-top d-block"></span></div>
+            <h4 class="text-muted"><span>7</span> Data Ayah</h4>
                 <!-- ayah //-->
                 <div class="row g-4 mb-3">
                     <div class="col-md">
@@ -287,13 +291,13 @@
                         <input type="text" class="form-control" name="pekerjaan_ayah" id="" aria-describedby="helpId" placeholder="">
                     </div>
                 </div>
-             
-                    <a id="prev_6" class="btn btn-warning btnPrev">Sebelumnya</a>
+                <div class="py-4"><span class="border-top d-block"></span></div>
+                    <a id="prev_6" class="btn btn-secondary btnPrev">Sebelumnya</a>
                     <a id="next_8" class="btn btn-primary btnNext">Selanjutnya</a>
      
             </div> <!-- step 7 -->
             <div class="tab-pane fade" id="step_8" role="tabpanel">
-                <div class="py-4"><span class="border-top d-block"></span></div>
+            <h4 class="text-muted"><span>8</span> Data Ibu</h4>
                 <!-- ibu //  -->
                 <div class="row g-4 mb-3">
                     <div class="col-md">
@@ -335,8 +339,8 @@
                         <input type="text" class="form-control" name="pekerjaan_ibu" id="" aria-describedby="helpId" placeholder="">
                     </div>
                 </div>
-                
-                    <a id="prev_7" class="btn btn-warning btnPrev">Sebelumnya</a> <button class="btn btn-success" type="submit">Submit</button>
+                <div class="py-4"><span class="border-top d-block"></span></div>
+                    <a id="prev_7" class="btn btn-secondary btnPrev">Sebelumnya</a> <button class="btn btn-success" type="submit">Submit</button>
                 
             </div> <!-- step 8 -->
         </div> <!-- end tab content -->
