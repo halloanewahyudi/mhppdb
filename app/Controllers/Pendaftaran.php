@@ -10,10 +10,11 @@ class Pendaftaran extends BaseController
     public function index()
     {
         //
+        return view('register');
+    }
+
+    public function creaete_profile(){
         return view('santri/form-pendaftaran');
     }
 
-    public function step(){
-        return view('santri/form-santri');
-    }
 }

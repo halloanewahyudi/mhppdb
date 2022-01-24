@@ -32,6 +32,16 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+// mulai
+
+// santri
+$routes->get('santri','SantriController::index');
+$routes->get('register-mi','SantriController::register_mi');
+$routes->get('santri-create','SantriController::create');
+$routes->get('success','SantriController::success');
+$routes->post('santri-create-action','SantriController::create_action');
+$routes->get('santri-update/(:any)','SantriController::update/$1');
+$routes->put('santri-update-action/(:any)','SantriController::update_action/$1');
 
 /*
  * --------------------------------------------------------------------

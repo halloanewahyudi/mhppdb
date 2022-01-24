@@ -23,6 +23,10 @@ class Santri extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '50',
             ],
+            'nis' => [
+                'type' => 'VARCHAR',
+                'constraint' => '50',
+            ],
             'nik' => [
                 'type' => 'VARCHAR',
                 'constraint' => '50',
@@ -39,7 +43,23 @@ class Santri extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '10',
             ],
-            'hp_orng_tua' => [
+            'anak_ke' => [
+                'type' => 'INT',
+                'constraint' => 2,
+            ],
+            'jumlah_saudara' => [
+                'type' => 'INT',
+                'constraint' => 2,
+            ],
+            'agama' => [
+                'type' => 'VARCHAR',
+                'constraint' => '20',
+            ],
+            'cita_cita' => [
+                'type' => 'VARCHAR',
+                'constraint' => '50',
+            ],
+            'no_hp' => [
                 'type' => 'INT',
                 'constraint' => 16,
             ],
@@ -51,43 +71,11 @@ class Santri extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '50',
             ],
-            'cita_cita' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'anak_ke' => [
-                'type' => 'INT',
-                'constraint' => 2,
-            ],
-            'jumlah_saudara' => [
-                'type' => 'INT',
-                'constraint' => 2,
-            ],
-            'tinggi_badan' => [
-                'type' => 'INT',
-                'constraint' => 3,
-            ],
-            'berat_badan' => [
-                'type' => 'INT',
-                'constraint' => 3,
-            ],
-            'lingkar_kepala' => [
-                'type' => 'INT',
-                'constraint' => 3,
-            ],
-            'golongan_darah' => [
-                'type' => 'VARCHAR',
-                'constraint' => '3',
-            ],
             'alamat_lengkap' => [
                 'type' => 'VARCHAR',
                 'constraint' => '250',
             ],
-            'provinsi' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'kabupaten_kota' => [
+            'desa_kelurahan' => [
                 'type' => 'VARCHAR',
                 'constraint' => '50',
             ],
@@ -95,7 +83,11 @@ class Santri extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '50',
             ],
-            'desa_kelurahan' => [
+            'kabupaten_kota' => [
+                'type' => 'VARCHAR',
+                'constraint' => '50',
+            ],
+            'provinsi' => [
                 'type' => 'VARCHAR',
                 'constraint' => '50',
             ],
@@ -103,105 +95,53 @@ class Santri extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '10',
             ],
+            'jenis_transportasi' => [
+                'type' => 'VARCHAR',
+                'constraint' => '30',
+            ],
+            'jarak_tempat_tinggal' => [
+                'type' => 'VARCHAR',
+                'constraint' => '30',
+            ],
+            'yang_membiayai_sekolah' => [
+                'type' => 'VARCHAR',
+                'constraint' => '30',
+            ],
+            'kebutuhan_khusus' => [
+                'type' => 'VARCHAR',
+                'constraint' => '30',
+            ],
+            'kebutuhan_disabilitas' => [
+                'type' => 'VARCHAR',
+                'constraint' => '30',
+            ],
+            'pra_sekolah' => [
+                'type' => 'VARCHAR',
+                'constraint' => '30',
+            ],
+            'imunisasi' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'nomer_kip' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'nomer_kk' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+            ],
             'sekolah_asal' => [
                 'type' => 'VARCHAR',
                 'constraint' => '50',
             ],
-            'no_telepon_sekolah_asal' => [
+            'nama_kepala_keluarga' => [
+                'type' => 'VARCHAR',
+                'constraint' => '50',
+            ],
+            'user_id' => [
                 'type' => 'INT',
-                'constraint' => 16,
-            ],
-            'alamat_sekolah_asal' => [
-                'type' => 'VARCHAR',
-                'constraint' => '250',
-            ],
-            'npsn' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'nsm' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'nomer_peserta_ujian' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'nomor_skhun' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'total_nilai_ujian_sd' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'tanggal_lulus' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'lulusan_dari' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'kk' => [
-                'type' => 'INT',
-                'constraint' => 30,
-            ],
-            'nama_ayah' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'tempat_lahir_ayah' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'tanggal_lahir_ayah' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'nik_ayah' => [
-                'type' => 'INT',
-                'constraint' => 30,
-            ],
-            'pendidikan_terakhir_ayah' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'penghasilan_ayah' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'pekerjaan_ayah' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'nama_ibu' => [
-                'type' => 'VARCHAR',
-                'constraint' => '50',
-            ],
-            'tempat_lahir_ibu' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'tanggal_lahir_ibu' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'nik_ibu' => [
-                'type' => 'INT',
-                'constraint' => 30,
-            ],
-            'pendidikan_terakhir_ibu' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'penghasilan_ibu' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
-            ],
-            'pekerjaan_ibu' => [
-                'type' => 'VARCHAR',
-                'constraint' => '30',
+                'constraint' => 5,
             ],
             'created_at'       => ['type' => 'datetime', 'null' => true],
             'updated_at'       => ['type' => 'datetime', 'null' => true],

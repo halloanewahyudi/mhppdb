@@ -1,7 +1,8 @@
 <?= $this->extend('layouts/main-test'); ?>
 <?= $this->Section('content'); ?>
 <div class="col-lg-8 mx-auto">
-    <form action="" method="post" id="formSantri">
+    <form action="<?= $action ?>" method="post" id="formSantri">
+    <?= csrf_field() ?>
         <div class="tab-content d-flex flex-column justify-content-center vh-100 py-5"  id="tabForm">
             <div class="tab-pane fade show active" id="step_1" role="tabpanel">
                 <h4 class="text-muted"><span>1</span> Data diri</h4>
@@ -340,7 +341,8 @@
                     </div>
                 </div>
                 <div class="py-4"><span class="border-top d-block"></span></div>
-                    <a id="prev_7" class="btn btn-secondary btnPrev">Sebelumnya</a> <button class="btn btn-success" type="submit">Submit</button>
+                    <a id="prev_7" class="btn btn-secondary btnPrev">Sebelumnya</a> 
+                    <button class="btn btn-success" type="submit">Submit</button>
                 
             </div> <!-- step 8 -->
         </div> <!-- end tab content -->
