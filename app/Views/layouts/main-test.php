@@ -8,11 +8,9 @@
     <link rel="icon" href="<?= base_url('assets/img/mhlogo.jpg');?>" type="image/png">
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>/assets/css/vue-select.css" rel="stylesheet">
     <link href="<?= base_url(); ?>/assets/css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <script src="<?= base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <body class="bg-light">
 <?php // = $this->include('layouts/header'); ?>

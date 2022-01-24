@@ -1,3 +1,5 @@
+
+$brown : #a57633;
 $colors: (
   "blue":       $blue,
   "indigo":     $indigo,
@@ -11,9 +13,11 @@ $colors: (
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "brown": $brown,
 );
-
+$primary: $brown ;
 .bg-app{
-    background-color: $teal-600;
+    background-color: $gray-800;
    }
+   
