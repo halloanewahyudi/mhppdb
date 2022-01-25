@@ -21,7 +21,7 @@ class SantriController extends BaseController
 
     public function create(){
         $data= [
-            'action'=> base_url('santri-create-action'),
+            'action'=> base_url('santri/create-action'),
         ];
         return view('santri/form-santri',$data);
     }
@@ -60,8 +60,9 @@ class SantriController extends BaseController
             'user_id'=> user_id(),
         ];
         $this->santri_model->insert($data);
-        session()->setFlashdata('sa','data Santri berhasil di input');
-        return  redirect()->to('success');
+        $id = $this->db->insert_id();
+        session()->setFlashdata('update','data Santri berhasil di input');
+        return redirect()->to('santri/update/'.$id);
     }
 
     public function view($id){
@@ -73,7 +74,7 @@ class SantriController extends BaseController
         $model = $this->santri_model->where('id',$id)->first();
         $data= [
             'data_santri'=> $model ,
-            'action'=> base_url('santri-update-action/'.$id),
+            'action'=> base_url('santri/update-action/'.$id),
         ];
         return view('santri/form-santri',$data);
 
@@ -115,7 +116,7 @@ class SantriController extends BaseController
  
         $this->santri_model->update($id,$data);
         session()->setFlashdata('update', 'Data santri telah di update');
-        return redirect()->to('santri-update/'.$id);
+        return redirect()->to('santri/update/'.$id);
     }
 
     public function success(){

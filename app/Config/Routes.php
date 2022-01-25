@@ -43,35 +43,35 @@ $routes->get('reg-ma-putri', 'Home::reg_ma_putri');
 
 // santri
 $routes->get('santri','SantriController::index');
-$routes->get('santri-create','SantriController::create');
-$routes->get('santri-success','SantriController::success');
-$routes->post('santri-create-action','SantriController::create_action');
-$routes->get('santri-update/(:any)','SantriController::update/$1');
-$routes->add('santri-update-action/(:any)','SantriController::update_action/$1');
+$routes->get('santri/create','SantriController::create');
+$routes->get('santri/success','SantriController::success');
+$routes->post('santri/create-action','SantriController::create_action');
+$routes->get('santri/update/(:any)','SantriController::update/$1');
+$routes->add('santri/update-action/(:any)','SantriController::update_action/$1');
 
 // ayah
 $routes->get('ayah','AyahController::index');
-$routes->get('ayah-create','AyahController::create');
-$routes->post('ayah-create-action','AyahController::create_action');
-$routes->get('ayah-success','AyahController::success');
-$routes->get('ayah-update/(:any)','AyahController::update/$1');
-$routes->put('ayah-update-action/(:any)','AyahController::update_action/$1');
+$routes->get('ayah/create','AyahController::create');
+$routes->post('ayah/create-action','AyahController::create_action');
+$routes->get('ayah/success','AyahController::success');
+$routes->get('ayah/update/(:any)','AyahController::update/$1');
+$routes->put('ayah/update-action/(:any)','AyahController::update_action/$1');
 
 // ibu
 $routes->get('ibu','IbuController::index');
-$routes->get('ibu-create','IbuController::create');
-$routes->post('ibu-create-action','IbuController::create_action');
-$routes->get('ibu-success','IbuController::success');
-$routes->get('ibu-update/(:any)','IbuController::update/$1');
-$routes->put('ibu-update-action/(:any)','IbuController::update_action/$1');
+$routes->get('ibu/create','IbuController::create');
+$routes->post('ibu/create-action','IbuController::create_action');
+$routes->get('ibu/success','IbuController::success');
+$routes->get('ibu/update/(:any)','IbuController::update/$1');
+$routes->put('ibu/update-action/(:any)','IbuController::update_action/$1');
 
 // sekolah asal
 $routes->get('sekolah-asal','SekolahAsalController::index');
-$routes->get('sekolah-asal-create','SekolahAsalController::create');
-$routes->post('sekolah-asal-create-action','SekolahAsalController::create_action');
-$routes->get('sekolah-asal-success','SekolahAsalController::success');
-$routes->get('sekolah-asal-update/(:any)','SekolahAsalController::update/$1');
-$routes->put('sekolah-asal-update-action/(:any)','SekolahAsalController::update_action/$1');
+$routes->get('sekolah-asal/create','SekolahAsalController::create');
+$routes->post('sekolah-asal/create-action','SekolahAsalController::create_action');
+$routes->get('sekolah-asal/success','SekolahAsalController::success');
+$routes->get('sekolah-asal/update/(:any)','SekolahAsalController::update/$1');
+$routes->put('sekolah-asal/update-action/(:any)','SekolahAsalController::update_action/$1');
 
 /*
  * --------------------------------------------------------------------
