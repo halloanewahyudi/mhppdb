@@ -7,7 +7,7 @@
     <title>Document</title>
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>/assets/css/dashboard.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <script src="<?= base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>
 

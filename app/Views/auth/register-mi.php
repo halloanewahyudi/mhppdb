@@ -7,7 +7,7 @@
 
         <form action="<?= route_to('register') ?>" method="post">
             <?= csrf_field() ?>
-           <input type="hidden" name="level" value="1">
+           <input type="hidden" name="level" value="<?= $level ?>">
             <div class="form-group">
                 <label for="email"><?= lang('Auth.email') ?></label>
                 <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" aria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">

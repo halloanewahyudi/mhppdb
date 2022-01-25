@@ -1,12 +1,32 @@
 <?= $this->extend('layouts/main-test'); ?>
 <?= $this->Section('content'); ?>
 <div class="row">
-    <div class="col-sm-6 offset-sm-3 d-flex flex-column justify-content-center vh-100">
+    <div class="col-sm-4 offset-sm-4 d-flex flex-column justify-content-center vh-100">
 
         <?= view('Myth\Auth\Views\_message_block') ?>
-
+        <?php
+        if ($level == 1) {
+            $jenjang = 'Pendaftaran MI';
+        } elseif ($level == 2) {
+            $jenjang = 'Pendaftaran RA';
+        } elseif ($level == 3) {
+            $jenjang = 'Pendaftaran MTS Putra';
+        } elseif ($level == 4) {
+            $jenjang = 'Pendaftaran MTS Putri';
+        } elseif ($level == 5) {
+            $jenjang = 'Pendaftaran MA Putri';
+        } elseif ($level == 6) {
+            $jenjang = 'Pendaftaran MA Putra';
+        } else {
+            $jenjang = 'Pendaftaran';
+        }
+        ?>
+        <h2> <?= $jenjang; ?></h2>
         <form action="<?= route_to('register') ?>" method="post">
             <?= csrf_field() ?>
+            <?php if (!empty($level)) {
+                echo form_hidden('level', $level);
+            } ?>
 
             <div class="form-group">
                 <label for="email"><?= lang('Auth.email') ?></label>

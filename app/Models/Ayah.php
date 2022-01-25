@@ -4,18 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Santri extends Model
+class Ayah extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'santri';
+    protected $table            = 'ayah';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [ 
-        'nama','nisn','nis','nik','tempat_lahir','tanggal_lahir','jenis_kelamin','anak_ke','jumlah_sudara','agama','no_hp','email','cita_cita','hobi','alamat_lengkap','desa_kelurahan','kecamatan','kabupaten_kota','provinsi','kode_pos','jenis_transportasi','jarak_tempat_tinggal','yang_membiayai_sekolah','kebutuhan_khusus','kebutuhan_disabilitas','pra_sekolah','imunisasi','nomer_kip','nomer_kk','nama_kepala_keluarga'];
+    protected $allowedFields    = ['nama_ayah','warga_negara_ayah','status_ayah','nik_ayah','tempat_lahir_ayah','tgl_lahir_ayah','pendidikan_ayah','pekerjaan_ayah','penghasilan_ayah','no_hp_ayah','tempat_tinggal_ayah','status_tempat_tinggal_ayah','alamat_lengkap_ayah','desa_kelurahan_ayah','kecamatan_ayah','kabupaten_kota_ayah','provinsi_ayah','kode_pos_ayah'];
 
     // Dates
     protected $useTimestamps = true;

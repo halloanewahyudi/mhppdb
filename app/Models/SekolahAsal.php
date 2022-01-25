@@ -4,18 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Santri extends Model
+class SekolahAsal extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'santri';
+    protected $table            = 'sekolah_asal';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [ 
-        'nama','nisn','nis','nik','tempat_lahir','tanggal_lahir','jenis_kelamin','anak_ke','jumlah_sudara','agama','no_hp','email','cita_cita','hobi','alamat_lengkap','desa_kelurahan','kecamatan','kabupaten_kota','provinsi','kode_pos','jenis_transportasi','jarak_tempat_tinggal','yang_membiayai_sekolah','kebutuhan_khusus','kebutuhan_disabilitas','pra_sekolah','imunisasi','nomer_kip','nomer_kk','nama_kepala_keluarga'];
+    protected $allowedFields    = ['lulus_dari','nama_sekolah','alamat_sekolah','no_kontak_sekolah','npsn','nsm','no_peserta_un','no_skhun','no_seri_ijazah','total_nilai_un','tangal_lulus_sekolah'];
 
     // Dates
     protected $useTimestamps = true;

@@ -4,18 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Santri extends Model
+class Ibu extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'santri';
+    protected $table            = 'ibu';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [ 
-        'nama','nisn','nis','nik','tempat_lahir','tanggal_lahir','jenis_kelamin','anak_ke','jumlah_sudara','agama','no_hp','email','cita_cita','hobi','alamat_lengkap','desa_kelurahan','kecamatan','kabupaten_kota','provinsi','kode_pos','jenis_transportasi','jarak_tempat_tinggal','yang_membiayai_sekolah','kebutuhan_khusus','kebutuhan_disabilitas','pra_sekolah','imunisasi','nomer_kip','nomer_kk','nama_kepala_keluarga'];
+    protected $allowedFields    = ['nama_ibu','warga_negara_ibu','status_ibu','nik_ibu','tempat_lahir_ibu','tgl_lahir_ibu','pendidikan_ibu','pekerjaan_ibu','penghasilan_ibu','no_hp_ibu','tempat_tinggal_ibu','status_tempat_tinggal_ibu','alamat_lengkap_ibu','desa_kelurahan_ibu','kecamatan_ibu','kabupaten_kota_ibu','provinsi_ibu','kode_pos_ibu',];
 
     // Dates
     protected $useTimestamps = true;

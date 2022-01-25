@@ -5,7 +5,7 @@ use App\Models\Santri;
 
 class Home extends BaseController
 {
-    protected $helpers = ['auth','url'];
+    protected $helpers = ['auth','url','form'];
 
     public function __construct()
     {
@@ -23,7 +23,46 @@ class Home extends BaseController
         return view('welcome_message',$data);
     }
 
-    public function dashboard(){
-         return '<h2> Hallo </h2>';
+   
+// registrasi
+        public function reg(){
+            $data = ['level'=>''];
+            return view('auth/register',$data);
+        }
+    public function reg_mi(){
+        $data=[
+            'level'=>1,
+        ];
+        return view('auth/register',$data);
+    }
+    public function reg_ra(){
+        $data=[
+            'level'=>2,
+        ];
+        return view('auth/register',$data);
+    }
+    public function reg_mts_putra(){
+        $data=[
+            'level'=>3,
+        ];
+        return view('auth/register',$data);
+    }
+    public function reg_mts_putri(){
+        $data=[
+            'level'=>4,
+        ];
+        return view('auth/register',$data);
+    }
+    public function reg_ma_putra(){
+        $data=[
+            'level'=>5,
+        ];
+        return view('auth/register',$data);
+    }
+    public function reg_ma_putri(){
+        $data=[
+            'level'=>6,
+        ];
+        return view('auth/register',$data);
     }
 }

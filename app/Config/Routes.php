@@ -32,16 +32,46 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('reg', 'Home::reg');
+$routes->get('reg-mi', 'Home::reg_mi');
+$routes->get('reg-ra', 'Home::reg_ra');
+$routes->get('reg-mts-putra', 'Home::reg_mts_putra');
+$routes->get('reg-mts-putri', 'Home::reg_mts_putri');
+$routes->get('reg-ma-putra', 'Home::reg_ma_putra');
+$routes->get('reg-ma-putri', 'Home::reg_ma_putri');
 // mulai
 
 // santri
 $routes->get('santri','SantriController::index');
-$routes->get('register-mi','SantriController::register_mi');
 $routes->get('santri-create','SantriController::create');
-$routes->get('success','SantriController::success');
+$routes->get('santri-success','SantriController::success');
 $routes->post('santri-create-action','SantriController::create_action');
 $routes->get('santri-update/(:any)','SantriController::update/$1');
-$routes->put('santri-update-action/(:any)','SantriController::update_action/$1');
+$routes->add('santri-update-action/(:any)','SantriController::update_action/$1');
+
+// ayah
+$routes->get('ayah','AyahController::index');
+$routes->get('ayah-create','AyahController::create');
+$routes->post('ayah-create-action','AyahController::create_action');
+$routes->get('ayah-success','AyahController::success');
+$routes->get('ayah-update/(:any)','AyahController::update/$1');
+$routes->put('ayah-update-action/(:any)','AyahController::update_action/$1');
+
+// ibu
+$routes->get('ibu','IbuController::index');
+$routes->get('ibu-create','IbuController::create');
+$routes->post('ibu-create-action','IbuController::create_action');
+$routes->get('ibu-success','IbuController::success');
+$routes->get('ibu-update/(:any)','IbuController::update/$1');
+$routes->put('ibu-update-action/(:any)','IbuController::update_action/$1');
+
+// sekolah asal
+$routes->get('sekolah-asal','SekolahAsalController::index');
+$routes->get('sekolah-asal-create','SekolahAsalController::create');
+$routes->post('sekolah-asal-create-action','SekolahAsalController::create_action');
+$routes->get('sekolah-asal-success','SekolahAsalController::success');
+$routes->get('sekolah-asal-update/(:any)','SekolahAsalController::update/$1');
+$routes->put('sekolah-asal-update-action/(:any)','SekolahAsalController::update_action/$1');
 
 /*
  * --------------------------------------------------------------------
