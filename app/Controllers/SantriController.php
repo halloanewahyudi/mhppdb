@@ -13,10 +13,10 @@ class SantriController extends BaseController
     {
         $this->santri_model = new Santri();
     }
+    
     public function index()
     {
 
-       return view('auth/login',['config' => $this->config]);
     }
 
     public function create(){

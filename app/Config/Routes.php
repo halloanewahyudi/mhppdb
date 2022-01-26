@@ -78,6 +78,9 @@ $routes->add('sekolah-asal/update-action/(:any)','SekolahAsalController::update_
 /* admin
 ==================================*/
 $routes->get('admin','AdminController::index');
+$routes->get('admin/santri','AdminController::santri');
+$routes->get('admin/orang-tua','AdminController::orang_tua');
+$routes->get('admin/sekolah-asal','AdminController::sekolah_asal');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
