@@ -60,7 +60,7 @@ class SantriController extends BaseController
             'user_id'=> user_id(),
         ];
         $this->santri_model->insert($data);
-        $id = $this->db->insert_id();
+        $id = $this->santri_model->insertID();
         session()->setFlashdata('update','data Santri berhasil di input');
         return redirect()->to('santri/update/'.$id);
     }
@@ -119,13 +119,5 @@ class SantriController extends BaseController
         return redirect()->to('santri/update/'.$id);
     }
 
-    public function success(){
-       $santri =  $this->santri_model->where('user_id',user_id())->first();
-        $data = [
-            'judul'=>'Selamat !,'. $santri['nama'],
-            'deskripsi'=>'Anda telah mengisi form data profil'
-        ];
-        return view('santri/success',$data);
 
-    }
 }

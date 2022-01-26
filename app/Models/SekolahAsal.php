@@ -14,7 +14,7 @@ class SekolahAsal extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['lulus_dari','nama_sekolah','alamat_sekolah','no_kontak_sekolah','npsn','nsm','no_peserta_un','no_skhun','no_seri_ijazah','total_nilai_un','tangal_lulus_sekolah'];
+    protected $allowedFields    = ['lulus_dari','nama_sekolah','alamat_sekolah','no_kontak_sekolah','npsn','nsm','no_peserta_un','no_skhun','no_seri_ijazah','total_nilai_un','tangal_lulus_sekolah','user_id'];
 
     // Dates
     protected $useTimestamps = true;

@@ -13,27 +13,27 @@
     <form action="<?= $action; ?>" method="post">
         <div class="mb-3">
             <label for="" class="form-label">Nama Calon Santri </label>
-            <input type="text" class="form-control" name="nama" id="" value="<?= !empty($data_santri['nama']) ? $data_santri['nama'] : '' ?>">
+            <input type="text" class="form-control" name="nama" id="" value="<?= !empty($data_santri['nama']) ? $data_santri['nama'] : '' ?>" required>
             <small id="helpId" class="form-text text-muted">Nama Lengkap</small>
         </div>
         <div class="row mb-3 ">
             <div class="col-lg">
                 <label for="" class="form-label">NISN</label>
-                <input type="text" class="form-control" name="nisn" id="nisn" value="<?= !empty($data_santri['nisn']) ? $data_santri['nisn'] : '' ?>">
+                <input type="text" class="form-control" name="nisn" id="nisn" value="<?= !empty($data_santri['nisn']) ? $data_santri['nisn'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">NIS</label>
-                <input type="text" class="form-control" name="nis" id="nis" value="<?= !empty($data_santri['nis']) ? $data_santri['nis'] : '' ?>">
+                <input type="text" class="form-control" name="nis" id="nis" value="<?= !empty($data_santri['nis']) ? $data_santri['nis'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">NIK</label>
-                <input type="text" class="form-control" name="nik" id="nik" value="<?= !empty($data_santri['nik']) ? $data_santri['nik'] : '' ?>">
+                <input type="text" class="form-control" name="nik" id="nik" value="<?= !empty($data_santri['nik']) ? $data_santri['nik'] : '' ?>"  minlength="16" maxlength="16" required>
             </div>
         </div>
         <div class="row mb-3 ">
             <div class="col-lg">
                 <label for="" class="form-label">No HP</label>
-                <input type="number" class="form-control" name="no_hp" id="no_hp" value="<?= !empty($data_santri['no_hp']) ? $data_santri['no_hp'] : '' ?>">
+                <input type="number" class="form-control" name="no_hp" id="no_hp" value="<?= !empty($data_santri['no_hp']) ? $data_santri['no_hp'] : '' ?>" required>
                 <small id="helpId" class="form-text text-muted">Nomer yang dapat di hubungi</small>
             </div>
             <div class="col-lg">
@@ -45,22 +45,22 @@
         <div class="row mb-3 ">
             <div class="col-lg">
                 <label for="" class="form-label">Tempat Lahir</label>
-                <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir" value="<?= !empty($data_santri['tempat_lahir']) ? $data_santri['tempat_lahir'] : '' ?>">
+                <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir" value="<?= !empty($data_santri['tempat_lahir']) ? $data_santri['tempat_lahir'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Tanggal Lahir</label>
-                <input type="text" class="form-control datepicker" name="tanggal_lahir" id="tanggal_lahir" value="<?= !empty($data_santri['tanggal_lahir']) ? $data_santri['tanggal_lahir'] : '' ?>" autocomplete="off">
+                <input type="text" class="form-control datepicker" name="tanggal_lahir" id="tanggal_lahir" value="<?= !empty($data_santri['tanggal_lahir']) ? $data_santri['tanggal_lahir'] : '' ?>" autocomplete="off" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Jenis Kelamin</label>
                 <div class="align-items-center d-flex pt-2 ">
                     <div class="form-check form-check-inline m-0 ps-2">
                         <label class="form-check-label">
-                        <input type="radio" name="jenis_kelamin" value="Laki laki"<?php echo ($data_santri['jenis_kelamin'] == 'Laki laki' ? ' checked' : ''); ?>> Laki laki </label>
+                        <input type="radio" name="jenis_kelamin" value="Laki laki" <?php if(!empty($data_santri['jenis_kelamin']))  echo ($data_santri['jenis_kelamin'] == 'Laki laki' ? ' checked' : ''); ?> > Laki laki </label>
                     </div>
                     <div class="form-check form-check-inline m-0 ps-2">
                         <label class="form-check-label">
-                        <input type="radio" name="jenis_kelamin" value="Perempuan"<?php echo ($data_santri['jenis_kelamin'] == 'Perempuan' ? ' checked' : ''); ?>> Perempuan
+                        <input type="radio" name="jenis_kelamin" value="Perempuan" <?php if(!empty($data_santri['jenis_kelamin']))  echo ($data_santri['jenis_kelamin'] == 'Perempuan' ? ' checked' : ''); ?> > Perempuan
                         </label>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                 } else {
                     $selected = 'Islam';
                 }
-                echo form_dropdown('agama', $options, 'Islam', array('class' => 'form-select'));
+                echo form_dropdown('agama', $options, 'Islam', array('class' => 'form-select', 'required'=>'required'));
                 ?>
             </div>
         </div>
@@ -99,38 +99,38 @@
         <div class="row mb-3 ">
             <div class="col-lg">
                 <label for="" class="form-label">Cita cita</label>
-                <input type="text" class="form-control" name="cita_cita" id="cita_cita" value="<?= !empty($data_santri['cita_cita']) ? $data_santri['cita_cita'] : '' ?>">
+                <input type="text" class="form-control" name="cita_cita" id="cita_cita" value="<?= !empty($data_santri['cita_cita']) ? $data_santri['cita_cita'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Hobi</label>
-                <input type="text" class="form-control" name="hobi" id="hobi" value="<?= !empty($data_santri['hobi']) ? $data_santri['hobi'] : '' ?>">
+                <input type="text" class="form-control" name="hobi" id="hobi" value="<?= !empty($data_santri['hobi']) ? $data_santri['hobi'] : '' ?>" required>
             </div>
         </div>
         <div class="divider py-4 d-block align-items-center"><span class="border  d-block"></span></div>
         <div class="row">
             <div class="col-lg mb-3">
                 <label for="" class="form-label">Alamat Lengkap</label>
-                <textarea class="form-control" name="alamat_lengkap" id="alamat_lengkap" rows="3"><?= !empty($data_santri['alamat_lengkap']) ? $data_santri['alamat_lengkap'] : '' ?></textarea>
+                <textarea class="form-control" name="alamat_lengkap" id="alamat_lengkap" rows="3" required><?= !empty($data_santri['alamat_lengkap']) ? $data_santri['alamat_lengkap'] : '' ?></textarea>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-lg">
                 <label for="" class="form-label">Desa/ kelurahan</label>
-                <input type="text" class="form-control" name="desa_kelurahan" id="desa_kelurahan" value="<?= !empty($data_santri['desa_kelurahan']) ? $data_santri['desa_kelurahan'] : '' ?>">
+                <input type="text" class="form-control" name="desa_kelurahan" id="desa_kelurahan" value="<?= !empty($data_santri['desa_kelurahan']) ? $data_santri['desa_kelurahan'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Kecamatan</label>
-                <input type="text" class="form-control" name="kecamatan" id="kecamatan" value="<?= !empty($data_santri['kecamatan']) ? $data_santri['kecamatan'] : '' ?>">
+                <input type="text" class="form-control" name="kecamatan" id="kecamatan" value="<?= !empty($data_santri['kecamatan']) ? $data_santri['kecamatan'] : '' ?>" required>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-lg">
                 <label for="" class="form-label">Kabupaten / Kota</label>
-                <input type="text" class="form-control" name="kabupaten_kota" id="kabupaten_kota" value="<?= !empty($data_santri['kabupaten_kota']) ? $data_santri['kabupaten_kota'] : '' ?>">
+                <input type="text" class="form-control" name="kabupaten_kota" id="kabupaten_kota" value="<?= !empty($data_santri['kabupaten_kota']) ? $data_santri['kabupaten_kota'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Provinsi</label>
-                <input type="text" class="form-control" name="provinsi" id="provinsi" value="<?= !empty($data_santri['provinsi']) ? $data_santri['provinsi'] : '' ?>">
+                <input type="text" class="form-control" name="provinsi" id="provinsi" value="<?= !empty($data_santri['provinsi']) ? $data_santri['provinsi'] : '' ?>" required>
             </div>
             <div class="col-lg-3">
                 <label for="" class="form-label">Kode Pos</label>
@@ -155,7 +155,7 @@
                 } else {
                     $selected = '';
                 }
-                echo form_dropdown('jenis_transportasi', $options, $selected, array('class' => 'form-select'));
+                echo form_dropdown('jenis_transportasi', $options, $selected, array('class' => 'form-select','required'=>'required'));
                 ?>
                 <small id="helpId" class="form-text text-muted">Transportasi yang di gunakan ke sekolah</small>
             </div>
@@ -176,7 +176,7 @@
                 } else {
                     $selected = '';
                 }
-                echo form_dropdown('jarak_tempat_tinggal', $options,$selected, array('class' => 'form-select'));
+                echo form_dropdown('jarak_tempat_tinggal', $options,$selected, array('class' => 'form-select', 'required'=>'required'));
                 ?>
                 <small id="helpId" class="form-text text-muted">Jarak tempat tinggal dari rumah ke sekolah</small>
             </div>
@@ -196,7 +196,7 @@
                 } else {
                     $selected = '';
                 }
-                echo form_dropdown('yang_membiayai_sekolah', $options, $selected, array('class' => 'form-select'));
+                echo form_dropdown('yang_membiayai_sekolah', $options, $selected, array('class' => 'form-select', 'required'=>'required'));
                 ?>
                 <small id="helpId" class="form-text text-muted">Jarak tempat tinggal dari rumah ke sekolah</small>
             </div>
@@ -206,12 +206,12 @@
                 <label for="" class="form-label">Kenbutuhan Khusus</label> <br>
                 <div class="form-check form-check-inline m-0 ps-2">
                     <label class="form-check-label">
-                    <input type="radio" name="kebutuhan_khusus" value="Tidak"<?php echo ($data_santri['kebutuhan_khusus'] == 'Tidak' ? ' checked' : ''); ?>> Tidak
+                    <input type="radio" name="kebutuhan_khusus" value="Tidak"<?php if(!empty($data_santri['kebutuhan_khusus'])) echo ($data_santri['kebutuhan_khusus'] == 'Tidak' ? ' checked' : ''); ?>> Tidak
                     </label>
                 </div>
                 <div class="form-check form-check-inline m-0 ps-2">
                     <label class="form-check-label">
-                    <input type="radio" name="kebutuhan_khusus" value="Ya"<?php echo ($data_santri['kebutuhan_khusus'] == 'Ya' ? ' checked' : ''); ?>> Ya
+                    <input type="radio" name="kebutuhan_khusus" value="Ya"<?php if(!empty($data_santri['kebutuhan_khusus']))  echo ($data_santri['kebutuhan_khusus'] == 'Ya' ? ' checked' : ''); ?>> Ya
                  </label>
                 </div>
             </div>
@@ -219,12 +219,12 @@
                 <label for="" class="form-label">Kenbutuhan Disabilitas</label> <br>
                 <div class="form-check form-check-inline m-0 ps-2">
                     <label class="form-check-label">
-                    <input type="radio" name="kebutuhan_disabilitas" value="Tidak"<?php echo ($data_santri['kebutuhan_disabilitas'] == 'Tidak' ? ' checked' : ''); ?>> Tidak
+                    <input type="radio" name="kebutuhan_disabilitas" value="Tidak"<?php if(!empty($data_santri['kebutuhan_disabilitas']))  echo ($data_santri['kebutuhan_disabilitas'] == 'Tidak' ? ' checked' : ''); ?>> Tidak
                     </label>
                 </div>
                 <div class="form-check form-check-inline m-0 ps-2">
                     <label class="form-check-label">
-                    <input type="radio" name="kebutuhan_disabilitas" value="Ya"<?php echo ($data_santri['kebutuhan_disabilitas'] == 'Ya' ? ' checked' : ''); ?>> Ya
+                    <input type="radio" name="kebutuhan_disabilitas" value="Ya"<?php if(!empty($data_santri['kebutuhan_disabilitas']))  echo ($data_santri['kebutuhan_disabilitas'] == 'Ya' ? ' checked' : ''); ?>> Ya
                  </label>
                 </div>
             </div>
@@ -262,14 +262,14 @@
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Nomer KK</label>
-                <input type="text" class="form-control" name="nomer_kk" id="nomer_kk" value="<?= !empty($data_santri['nomer_kk']) ? $data_santri['nomer_kk'] : '' ?>">
+                <input type="text" class="form-control" name="nomer_kk" id="nomer_kk" value="<?= !empty($data_santri['nomer_kk']) ? $data_santri['nomer_kk'] : '' ?>" required>
             </div>
             
         </div>
         <div class="row mb-3">
         <div class="col-lg">
                 <label for="" class="form-label">Nama Kepala keluarga</label>
-                <input type="text" class="form-control" name="nama_kepala_keluarga" id="nama_kepala_keluarga" value="<?= !empty($data_santri['nama_kepala_keluarga']) ? $data_santri['nama_kepala_keluarga'] : '' ?>">
+                <input type="text" class="form-control" name="nama_kepala_keluarga" id="nama_kepala_keluarga" value="<?= !empty($data_santri['nama_kepala_keluarga']) ? $data_santri['nama_kepala_keluarga'] : '' ?>" required>
             </div>
         </div>
         <div class="divider py-4 d-block align-items-center"><span class="border  d-block"></span></div>

@@ -14,7 +14,7 @@ class Ayah extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_ayah','warga_negara_ayah','status_ayah','nik_ayah','tempat_lahir_ayah','tgl_lahir_ayah','pendidikan_ayah','pekerjaan_ayah','penghasilan_ayah','no_hp_ayah','tempat_tinggal_ayah','status_tempat_tinggal_ayah','alamat_lengkap_ayah','desa_kelurahan_ayah','kecamatan_ayah','kabupaten_kota_ayah','provinsi_ayah','kode_pos_ayah'];
+    protected $allowedFields    = ['nama_ayah','warga_negara_ayah','status_ayah','nik_ayah','tempat_lahir_ayah','tgl_lahir_ayah','pendidikan_ayah','pekerjaan_ayah','penghasilan_ayah','no_hp_ayah','tempat_tinggal_ayah','status_tempat_tinggal_ayah','alamat_lengkap_ayah','desa_kelurahan_ayah','kecamatan_ayah','kabupaten_kota_ayah','provinsi_ayah','kode_pos_ayah','user_id'];
 
     // Dates
     protected $useTimestamps = true;

@@ -14,7 +14,7 @@ class Ibu extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_ibu','warga_negara_ibu','status_ibu','nik_ibu','tempat_lahir_ibu','tgl_lahir_ibu','pendidikan_ibu','pekerjaan_ibu','penghasilan_ibu','no_hp_ibu','tempat_tinggal_ibu','status_tempat_tinggal_ibu','alamat_lengkap_ibu','desa_kelurahan_ibu','kecamatan_ibu','kabupaten_kota_ibu','provinsi_ibu','kode_pos_ibu',];
+    protected $allowedFields    = ['nama_ibu','warga_negara_ibu','status_ibu','nik_ibu','tempat_lahir_ibu','tgl_lahir_ibu','pendidikan_ibu','pekerjaan_ibu','penghasilan_ibu','no_hp_ibu','tempat_tinggal_ibu','status_tempat_tinggal_ibu','alamat_lengkap_ibu','desa_kelurahan_ibu','kecamatan_ibu','kabupaten_kota_ibu','provinsi_ibu','kode_pos_ibu','user_id'];
 
     // Dates
     protected $useTimestamps = true;
