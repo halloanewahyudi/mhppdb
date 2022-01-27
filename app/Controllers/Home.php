@@ -15,7 +15,7 @@ class Home extends BaseController
     {
         $get_id = $this->santri_model->where('user_id', user_id())->first();
         if(logged_in() && !empty($get_id['id'])){
-          $data =[ 'nama'=>$get_id['nama']];
+          
         }else{
             $data = ['nama'=>'Silakan Daftar'];
         }
@@ -23,6 +23,16 @@ class Home extends BaseController
         return view('welcome_message',$data);
     }
 
+public function steping(){
+    $data = [
+        'action'
+    ]
+    return view('santri/form-santri');
+}
+// login
+public function login(){
+    return view('auth/login');
+}
    
 // registrasi
         public function reg(){
@@ -65,4 +75,6 @@ class Home extends BaseController
         ];
         return view('auth/register',$data);
     }
+
+
 }
