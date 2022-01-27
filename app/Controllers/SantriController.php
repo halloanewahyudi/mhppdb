@@ -9,6 +9,7 @@ class SantriController extends BaseController
 {
     protected $helpers = ['auth','url','form'];
 
+
     public function __construct()
     {
         $this->santri_model = new Santri();
@@ -17,6 +18,14 @@ class SantriController extends BaseController
     public function index()
     {
 
+    }
+    
+    public function dashboard($id){
+        $model = $this->santri_model->where('user_id',$id)->first();
+        $data = [
+            'data_santri'=>$model,
+        ];
+        return view('santri/dashboard', $data);
     }
 
     public function create(){
@@ -65,9 +74,12 @@ class SantriController extends BaseController
         return redirect()->to('santri/update/'.$id);
     }
 
-    public function view($id){
 
+    public function view($id)
+    {
+        
     }
+
     
     public function update($id){
     

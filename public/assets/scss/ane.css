@@ -1,0 +1,6 @@
+@import url("_variables.scss");
+.card.shadow:hover {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+/*# sourceMappingURL=ane.css.map */

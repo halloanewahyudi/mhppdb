@@ -7,8 +7,8 @@
             <p>Data santri telah ter update</p>
         </div>
     <?php endif; ?>
-    <h2>Data Santri</h2>
-    <p>Lengkapi data berikut ini</p>
+    <p>Silakan lengkapi data diri anda</p>
+    <h5>Data Santri</h5>
     <hr>
     <form action="<?= $action; ?>" method="post">
         <div class="mb-3">
@@ -255,14 +255,14 @@
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Nomer KIP</label>
-                <input type="text" class="form-control" name="nomer_kip" id="nomer_kip" value="<?= !empty($data_santri['nomer_kip']) ? $data_santri['nomer_kip'] : '' ?>">
+                <input type="number" class="form-control" name="nomer_kip" id="nomer_kip" value="<?= !empty($data_santri['nomer_kip']) ? $data_santri['nomer_kip'] : '' ?>">
                 <small class="form-text text-muted">
                     Silakan isi "tidak ada" apabila tidak ada
                 </small>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Nomer KK</label>
-                <input type="text" class="form-control" name="nomer_kk" id="nomer_kk" value="<?= !empty($data_santri['nomer_kk']) ? $data_santri['nomer_kk'] : '' ?>" required>
+                <input type="number" class="form-control" name="nomer_kk" id="nomer_kk" value="<?= !empty($data_santri['nomer_kk']) ? $data_santri['nomer_kk'] : '' ?>" required>
             </div>
             
         </div>
@@ -273,7 +273,13 @@
             </div>
         </div>
         <div class="divider py-4 d-block align-items-center"><span class="border  d-block"></span></div>
+        <div class="d-flex justify-content-between">
         <button class="btn btn-primary" type="submit">Submit</button>
+        <?php if(!empty($data_santri)): ?>
+            <a href="<?= base_url('ayah/create'); ?>" class="btn btn-info text-white"> Selanjutnya <i class="fas fa-arrow-right"></i></a>
+            <?php endif; ?>
+        </div>
+       
     </form>
 </div>
 

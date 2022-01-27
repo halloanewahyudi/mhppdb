@@ -7,8 +7,8 @@
             <p>Data santri telah ter update</p>
         </div>
     <?php endif; ?>
-    <h2>Data Ibu</h2>
-    <p>Lengkapi data berikut ini</p>
+    <p>Silakan lengkapi data diri anda</p>
+    <h5>Data Ibu</h5>
     <hr>
     <form action="<?= $action; ?>" method="post" data-validate>
         <div class="mb-3">
@@ -165,7 +165,15 @@
             </div>
         </div>
         <div class="divider py-4 d-block align-items-center"><span class="border  d-block"></span></div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <div class="d-md-flex justify-content-between">
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <div>
+                <button class="btn btn-secondary" onclick="window.history.back();"><i class="fas fa-arrow-left"></i> Kembali</button>
+                <?php if (!empty($data_ibu)) : ?>
+                    <a href="<?= base_url('sekolah-asal/create'); ?>" class="btn btn-info text-white"> Selanjutnya <i class="fas fa-arrow-right"></i></a>
+                <?php endif; ?>
+            </div>
+        </div>
     </form>
 </div>
 <?= $this->endSection(); ?>

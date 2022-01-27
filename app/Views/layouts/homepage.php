@@ -8,7 +8,9 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>/assets/css/style.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/scss/ane.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link href="<?= base_url(); ?>/assets/fontawesome/css/all.min.css" rel="stylesheet">
     <script src="<?= base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>
 
 </head>

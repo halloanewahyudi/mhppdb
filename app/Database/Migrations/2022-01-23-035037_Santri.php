@@ -110,10 +110,12 @@ class Santri extends Migration
             'kebutuhan_khusus' => [
                 'type' => 'VARCHAR',
                 'constraint' => '30',
+                'default'=>'Tidak',
             ],
             'kebutuhan_disabilitas' => [
                 'type' => 'VARCHAR',
                 'constraint' => '30',
+                'default'=>'Tidak',
             ],
             'pra_sekolah' => [
                 'type' => 'VARCHAR',

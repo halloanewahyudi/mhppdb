@@ -46,16 +46,15 @@ $routes->get('reg-ma-putri', 'Home::reg_ma_putri');
 // santri
 $routes->get('santri','SantriController::index');
 $routes->get('santri/create','SantriController::create');
-$routes->get('santri/success','SantriController::success');
 $routes->post('santri/create-action','SantriController::create_action');
 $routes->get('santri/update/(:any)','SantriController::update/$1');
 $routes->add('santri/update-action/(:any)','SantriController::update_action/$1');
+$routes->get('santri/dashboard/(:num)','SantriController::dashboard/$1');
 
 // ayah
 $routes->get('ayah','AyahController::index');
 $routes->get('ayah/create','AyahController::create');
 $routes->post('ayah/create-action','AyahController::create_action');
-$routes->get('ayah/success','AyahController::success');
 $routes->get('ayah/update/(:any)','AyahController::update/$1');
 $routes->add('ayah/update-action/(:any)','AyahController::update_action/$1');
 
@@ -63,7 +62,6 @@ $routes->add('ayah/update-action/(:any)','AyahController::update_action/$1');
 $routes->get('ibu','IbuController::index');
 $routes->get('ibu/create','IbuController::create');
 $routes->post('ibu/create-action','IbuController::create_action');
-$routes->get('ibu/success','IbuController::success');
 $routes->get('ibu/update/(:any)','IbuController::update/$1');
 $routes->add('ibu/update-action/(:any)','IbuController::update_action/$1');
 
@@ -71,9 +69,22 @@ $routes->add('ibu/update-action/(:any)','IbuController::update_action/$1');
 $routes->get('sekolah-asal','SekolahAsalController::index');
 $routes->get('sekolah-asal/create','SekolahAsalController::create');
 $routes->post('sekolah-asal/create-action','SekolahAsalController::create_action');
-$routes->get('sekolah-asal/success','SekolahAsalController::success');
 $routes->get('sekolah-asal/update/(:any)','SekolahAsalController::update/$1');
 $routes->add('sekolah-asal/update-action/(:any)','SekolahAsalController::update_action/$1');
+
+// Berkas
+$routes->get('berkas','BerkasController::index');
+$routes->get('berkas/create','BerkasController::create');
+$routes->post('berkas/create-action','BerkasController::create_action');
+$routes->get('berkas/update/(:any)','BerkasController::update/$1');
+$routes->add('berkas/update-action/(:any)','BerkasController::update_action/$1');
+
+// Berkas
+$routes->get('pembayaran','PembayaranController::index');
+$routes->get('pembayaran/create','PembayaranController::create');
+$routes->post('pembayaran/create-action','PembayaranController::create_action');
+$routes->get('pembayaran/update/(:any)','PembayaranController::update/$1');
+$routes->add('pembayaran/update-action/(:any)','PembayaranController::update_action/$1');
 
 /* admin
 ==================================*/

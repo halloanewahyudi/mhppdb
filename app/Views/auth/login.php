@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/main-test'); ?>
+<?= $this->extend('layouts/blank'); ?>
 <?= $this->Section('content'); ?>
 <div class="row">
     <div class="col-sm-4 offset-sm-4 d-flex flex-column justify-content-center vh-100">

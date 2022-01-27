@@ -7,8 +7,8 @@
             <p>Data santri telah ter update</p>
         </div>
     <?php endif; ?>
-    <h2>Data Ibu</h2>
-    <p>Lengkapi data berikut ini</p>
+    <p>Silakan lengkapi data diri anda</p>
+    <h5>Data Sekolah Asal</h5>
     <hr>
     <form action="<?= $action; ?>" method="post" data-validate>
         <div class="row mb-3">
@@ -36,13 +36,13 @@
         <div class="row mb-3">
             <div class="col">
                 <label for="" class="form-label">Alamat Sekolah Sebelumnya</label>
-                <textarea class="form-control" name="alamat_sekolah" id="alamat_sekolah" rows="3" required autocomplete="off"><?= !empty($data_sekolah_asal['alamat_sekolah']) ? $data_sekolah_asal['alamat_sekolah'] : '' ?></textarea>
+                <textarea class="form-control" name="alamat_sekolah" id="alamat_sekolah" rows="3" required autocomplete="off" required><?= !empty($data_sekolah_asal['alamat_sekolah']) ? $data_sekolah_asal['alamat_sekolah'] : '' ?></textarea>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-lg">
                 <label for="" class="form-label">No Kontak Sekolah</label>
-                <input type="number" class="form-control" name="no_kontak_sekolah" id="no_kontak_sekolah" value="<?= !empty($data_sekolah_asal['no_kontak_sekolah']) ? $data_sekolah_asal['no_kontak_sekolah'] : '' ?>">
+                <input type="number" class="form-control" name="no_kontak_sekolah" id="no_kontak_sekolah" value="<?= !empty($data_sekolah_asal['no_kontak_sekolah']) ? $data_sekolah_asal['no_kontak_sekolah'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label"> NPSN </label>
@@ -58,12 +58,12 @@
         <div class="row mb-3">
             <div class="col-lg">
                 <label for="" class="form-label">Nomor Peserta UN SD/MI</label>
-                <input type="number" class="form-control" name="no_peserta_un" id="no_peserta_un" value="<?= !empty($data_sekolah_asal['no_peserta_un']) ? $data_sekolah_asal['no_peserta_un'] : '' ?>">
+                <input type="number" class="form-control" name="no_peserta_un" id="no_peserta_un" value="<?= !empty($data_sekolah_asal['no_peserta_un']) ? $data_sekolah_asal['no_peserta_un'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Nomor SKHUN SD/MI</label>
                 <input type="number" class="form-control" name="no_skhun" id="no_skhun" value="<?= !empty($data_sekolah_asal['no_skhun']) ? $data_sekolah_asal['no_skhun'] : '' ?>">
-   
+
             </div>
         </div>
 
@@ -74,14 +74,22 @@
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Total Nilai UN SD/MI</label>
-                <input type="number" class="form-control" name="total_nilai_un" id="total_nilai_un" value="<?= !empty($data_sekolah_asal['total_nilai_un']) ? $data_sekolah_asal['total_nilai_un'] : '' ?>">
+                <input type="number" class="form-control" name="total_nilai_un" id="total_nilai_un" value="<?= !empty($data_sekolah_asal['total_nilai_un']) ? $data_sekolah_asal['total_nilai_un'] : '' ?>" required>
             </div>
             <div class="col-lg">
                 <label for="" class="form-label">Tanggal Lulus Sekolah</label>
                 <input type="text" class="form-control datepicker" name="tangal_lulus_sekolah" id="tangal_lulus_sekolah" value="<?= !empty($data_sekolah_asal['tangal_lulus_sekolah']) ? $data_sekolah_asal['tangal_lulus_sekolah'] : '' ?>">
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="d-md-flex justify-content-between">
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <div>
+                <button class="btn btn-secondary" onclick="window.history.back();"><i class="fas fa-arrow-left"></i> Kembali</button>
+                <?php if (!empty($data_sekolah_asal)) : ?>
+                    <a href="<?= base_url('/'); ?>" class="btn btn-success text-white"> Selesai <i class="fas fa-check"></i></a>
+                <?php endif; ?>
+            </div>
+        </div>
     </form>
 </div>
 <?= $this->endSection(); ?>

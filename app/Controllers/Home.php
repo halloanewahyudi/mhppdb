@@ -14,21 +14,22 @@ class Home extends BaseController
     public function index()
     {
         $get_id = $this->santri_model->where('user_id', user_id())->first();
-        if(logged_in() && !empty($get_id['id'])){
-          
-        }else{
-            $data = ['nama'=>'Silakan Daftar'];
+        if(logged_in() && empty($get_id['id'])){
+            return redirect()->to('santri/create/');
+        }elseif(logged_in()){
+           return redirect()->to('santri/dashboard/'.user_id());
         }
  
-        return view('welcome_message',$data);
+        return view('welcome_message');
     }
 
 public function steping(){
     $data = [
-        'action'
-    ]
-    return view('santri/form-santri');
+        'action'=> base_url('santri/create-action')
+    ];
+    return view('santri/form-santri', $data);
 }
+
 // login
 public function login(){
     return view('auth/login');
