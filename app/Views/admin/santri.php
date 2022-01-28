@@ -13,53 +13,6 @@
       </tr>
     </tbody>
   </table>
-
-      <table id="" class="table">
-        <th scope="col" ead>
-          <tr>
-            <th scope="col" scope="col"></th>
-            <th scope="col" scope="col">Nama</th>
-            <th scope="col" scope="col">NoReg</th>
-            <th scope="col" scope="col">Kontak</th>
-            <th scope="col" scope="col">Email</th>
-            <th scope="col" scope="col">Gender</th>
-            <th scope="col" scope="col">Jenjang</th>
-            <th scope="col" scope="col">Waktu Daftar</th>
-            <th scope="col" scope="col">Status</th>
-          </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td class="cs" id="filter_col2" data-column="1">
-                <input type="text" class="column_filter form-control" id="col1_filter">
-              </td>
-              <td class="cs" id="filter_col3" data-column="2">
-                <input type="text" class="column_filter form-control" id="col2_filter">
-              </td>
-              <td class="cs" id="filter_col4" data-column="3">
-                <input type="text" class="column_filter form-control" id="col3_filter">
-              </td>
-              <td class="cs" id="filter_col5" data-column="4">
-                <input type="text" class="column_filter form-control" id="col4_filter">
-              </td>
-              <td class="cs" id="filter_col6" data-column="5">
-                <input type="text" class="column_filter form-control" id="col5_filter">
-              </td>
-              <td class="cs" id="filter_col7" data-column="6">
-                <input type="text" class="column_filter form-control" id="col6_filter">
-              </td>
-              <td class="cs" id="filter_col8" data-column="7">
-                <input type="date" class="column_filter form-control" id="col7_filter">
-              </td>
-              <td class="cs" id="filter_col9" data-column="8">
-                <input type="text" class="column_filter form-control" placeholder="Invalid / Terdaftar" id="col8_filter">
-              </td>
-            </tr>
-          </tbody>
-      </table>
-
-
   <div class="card mb-4">
     <div class="card-header">
       <i class="fas fa-table me-1"></i>
@@ -69,35 +22,37 @@
     <table id="datatablesSimple" class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Nama</th>
-          <th scope="col">NISN</th>
-          <th scope="col">NIS</th>
-          <th scope="col">NIK(siswa)</th>
-          <th scope="col">Tempat Lahir</th>
-          <th scope="col">Tanggal Lahir</th>
-          <th scope="col">Jenis Kelamin</th>
-          <th scope="col">Anak Ke</th>
-          <th scope="col">Jumlah Saudara</th>
-          <th scope="col">Agama</th>
-          <th scope="col">Cita - cita</th>
-          <th scope="col">No HP</th>
-          <th scope="col">Email</th>
-          <th scope="col">Alamat</th>
-          <th scope="col">Kelurahan / Desa</th>
-          <th scope="col">Kecamatan</th>
-          <th scope="col">Kota / Kabupaten</th>
-          <th scope="col">Provinsi</th>
-          <th scope="col">Kode Pos</th>
-          <th scope="col">Transportasi ke Sekolah</th>
-          <th scope="col">Jarak Tempat Tinggal ke Madrasah</th>
-          <th scope="col">Yang Membiayai Sekolah</th>
-          <th scope="col">Keb Khusus</th>
-          <th scope="col">Keb Disabilitas</th>
-          <th scope="col">Pra Sekolah</th>
-          <th scope="col">Imunisasi</th>
-          <th scope="col">KIP</th>
-          <th scope="col">KK</th>
-          <th scope="col">Nama Kepala Keluarga</th>
+          <th>No</th>
+          <th >Nama</th>
+          <th >NISN</th>
+          <th >NIS</th>
+          <th >NIK</th>
+          <th >Tmp Lahir</th>
+          <th >Tgl Lahir</th>
+          <th >Gender</th>
+          <th >Anak Ke</th>
+          <th >Jmlh Saudara</th>
+          <th >Agama</th>
+          <th >Cita2</th>
+          <th >Hobi</th>
+          <th >No HP</th>
+          <th >Email</th>
+          <th >Alamat</th>
+          <th >Kel / Desa</th>
+          <th >Kec</th>
+          <th >Kota / Kab</th>
+          <th >Provinsi</th>
+          <th >Kode Pos</th>
+          <th >Transp</th>
+          <th >Jarak ke Madrasah</th>
+          <th >Pembiaya Sekolah</th>
+          <th >Keb Khusus</th>
+          <th >Keb Disabilitas</th>
+          <th >Pra Sekolah</th>
+          <th >Imunisasi</th>
+          <th >KIP</th>
+          <th >KK</th>
+          <th >Kep Keluarga</th>
         </tr>
       </thead>
       <tbody>
@@ -108,12 +63,35 @@
           <tr id="row_<?= $ds->id ?>">
             <td width="50"><?= $no ?></td>
             <td><?= $ds->nama ?></td>
-            <td><?= $ds->kontak; ?></td>
-            <td style="width:90px;"><?= $ds->email; ?></td>
-            <td style="width:120px"><?= $ds->jenis_kelamin; ?></td>
-            <td style="width:120px"><?= $ds->tempat_lahir; ?></td>
-
-
+            <td><?= $ds->nisn; ?></td>
+            <td><?= $ds->nis; ?></td>
+            <td ><?= $ds->nik; ?></td>
+            <td><?= $ds->tempat_lahir; ?></td>
+            <td><?= $ds->tanggal_lahir; ?></td>
+            <td><?= $ds->jenis_kelamin; ?></td>
+            <td><?= $ds->anak_ke; ?></td>
+            <td><?= $ds->jumlah_sudara; ?></td>
+            <td><?= $ds->agama; ?></td>
+            <td><?= $ds->cita_cita; ?></td>
+            <td><?= $ds->hobi; ?></td>
+            <td><?= $ds->no_hp; ?></td>
+            <td><?= $ds->email; ?></td>
+            <td><?= $ds->alamat_lengkap; ?></td>
+            <td><?= $ds->desa_kelurahan; ?></td>
+            <td><?= $ds->kecamatan; ?></td>
+            <td><?= $ds->kabupaten_kota; ?></td>
+            <td><?= $ds->provinsi; ?></td>
+            <td><?= $ds->kode_pos; ?></td>
+            <td><?= $ds->jenis_transportasi; ?></td>
+            <td><?= $ds->jarak_tempat_tinggal; ?></td>
+            <td><?= $ds->yang_membiayai_sekolah; ?></td>
+            <td><?= $ds->kebutuhan_khusus; ?></td>
+            <td><?= $ds->kebutuhan_disabilitas; ?></td>
+            <td><?= $ds->pra_sekolah; ?></td>
+            <td><?= $ds->imunisasi; ?></td>
+            <td><?= $ds->nomer_kip; ?></td>
+            <td><?= $ds->nomer_kk; ?></td>
+            <td><?= $ds->nama_kepala_keluarga; ?></td>
           </tr>
         <?php
           $no++;
@@ -221,9 +199,6 @@
   });
   //=====
 </script>
-<style>
-  #table_filter {
-    display: none;
-  }
+
 </style>
 <?= $this->endSection(); ?>
