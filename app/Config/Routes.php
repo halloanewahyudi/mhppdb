@@ -32,7 +32,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('reg', 'Home::reg');
+$routes->get('register', 'Home::reg');
 $routes->get('reg-mi', 'Home::reg_mi');
 $routes->get('reg-ra', 'Home::reg_ra');
 $routes->get('reg-mts-putra', 'Home::reg_mts_putra');
@@ -89,6 +89,7 @@ $routes->add('pembayaran/update-action/(:any)','PembayaranController::update_act
 /* admin
 ==================================*/
 $routes->get('admin','AdminController::index');
+$routes->get('admin/dashboard/(:num)','AdminController::dashboard/$1');
 $routes->get('admin/santri','AdminController::santri');
 $routes->get('admin/orang-tua','AdminController::orang_tua');
 $routes->get('admin/sekolah-asal','AdminController::sekolah_asal');

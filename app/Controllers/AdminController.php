@@ -23,7 +23,10 @@ class AdminController extends BaseController
         $this->sekola_asal_model = new SekolahAsal();
     }
 
-    public function index()
+    public function index(){
+        
+    }
+    public function dashboard($id)
     {
         $data = [
             'users' => $this->card('bg-info','Jumlah Santri', $this->user_model),
@@ -56,4 +59,5 @@ class AdminController extends BaseController
       
       return $output;
     }
+
 }

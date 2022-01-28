@@ -13,22 +13,24 @@ class Home extends BaseController
     }
     public function index()
     {
-        $get_id = $this->santri_model->where('user_id', user_id())->first();
-        if(logged_in() && empty($get_id['id'])){
-            return redirect()->to('santri/create/');
-        }elseif(logged_in()){
-           return redirect()->to('santri/dashboard/'.user_id());
+        $data_santri = $this->santri_model->where('user_id', user_id())->first();
+
+        if(logged_in()){
+            if(!empty($data_santri) && user()->level != null){
+                return redirect()->to('santri/dashboard/'.user_id());
+            }elseif(user()->level == null ){
+                return redirect()->to('admin/dashboard/'.user_id());
+            }
+            else{
+                return redirect()->to('santri/create/');
+            }
+
+        }else{
+            return view('welcome_message');
         }
- 
-        return view('welcome_message');
+        
     }
 
-public function steping(){
-    $data = [
-        'action'=> base_url('santri/create-action')
-    ];
-    return view('santri/form-santri', $data);
-}
 
 // login
 public function login(){

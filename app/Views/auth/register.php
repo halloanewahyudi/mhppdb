@@ -18,7 +18,8 @@
         } elseif ($level == 6) {
             $jenjang = 'Pendaftaran MA Putra';
         } else {
-            $jenjang = 'Pendaftaran';
+            $jenjang = 'Daftar';
+            $level = 0;
         }
         ?>
         <h2> <?= $jenjang; ?></h2>
