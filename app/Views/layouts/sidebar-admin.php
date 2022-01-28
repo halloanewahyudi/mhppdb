@@ -1,104 +1,66 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse">
-  <div class="position-sticky pt-3">
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/admin') ?>">
-          <span data-feather="home"></span>
-          Dashboard
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/daftar-user') ?>">
-          <span data-feather="users"></span>
-          Daftar User
-        </a>
-      </li>
- <?php if( in_groups(1,true) || in_groups(4,true)): ?>
- <?php if(in_groups(1,true)){
-     $collapse = 'collapse';
-  } else{
-    $collapse ='';
-  }  ?>
-      <li class="nav-item">
-         <a class="nav-link" data-bs-toggle="<?= $collapse ?>"  href="#profileItem" >
-          <span data-feather="user"></span>
-          Santri
-        </a>
-         <div class="<?= $collapse ?> bg-light border-right border" id="profileItem">
-        <a class="nav-link" href="<?= base_url('sudah-daftar/') ?>">
-         
-          Santri keseluruhan
-        </a>
-      <!--   <a class="nav-link" href="<?= base_url('santri-ra') ?>">
-          Jenjang RA
-        </a>
-         <a class="nav-link" href="<?= base_url('santri-mi') ?>">
-          Jenjang MI
-        </a> -->
-        <a class="nav-link" href="<?= base_url('santri-mts-putra') ?>">
-          Jenjang MTs Putra
-        </a>
-         <a class="nav-link" href="<?= base_url('santri-mts-putri') ?>">
-          Jenjang MTs Putri
-        </a>
-        <a class="nav-link" href="<?= base_url('santri-ma-putra') ?>">
-          Jenjang MA Putra
-        </a>
-        <a class="nav-link" href="<?= base_url('santri-ma-putri') ?>">
-          Jenjang MA Putri
-        </a>
-         </div>
-      </li>
-    <?php endif; ?>
-  <?php if( in_groups(3,true) || in_groups(1,true)  ): ?>
-  <?php if(in_groups(1,true)){
-     $collapse = 'collapse';
-  } else{
-    $collapse ='';
-  }  ?>
-      <li class="nav-item">
-       <a class="nav-link"  data-bs-toggle="<?= $collapse ?>" href="#pembayaranItem" >
-         <span data-feather="credit-card"></span> Pembayaran
-       </a>
-        <div class=" <?= $collapse ?> bg-light border-right border" id="pembayaranItem">
-        <a class="nav-link" href="<?= base_url('sudah-bayar/') ?>">
-          Seluruh Pembayaran
-        </a>
-        <!--  <a class="nav-link" href="<?//= base_url('ra-bayar/') ?>">
-          Jenjang RA
-        </a>
-        <a class="nav-link" href="<?//= base_url('mi-bayar/') ?>">
-          Jenjang MI
-        </a> -->
-        <a class="nav-link" href="<?= base_url('mts-putra-bayar/') ?>">
-          Jenjang MTs Putra
-        </a>
-        <a class="nav-link" href="<?= base_url('mts-putri-bayar/') ?>">  
-          Jenjang MTs Putri
-        </a>
-        <a class="nav-link" href="<?= base_url('ma-putra-bayar/') ?>">
-          Jenjang MA Putra
-        </a>
-         <a class="nav-link" href="<?= base_url('ma-putri-bayar/') ?>">
-          Jenjang MA Putri
-        </a>
-      </div>
-      </li>
-    <?php endif; ?>
-    <?php if( in_groups(1,true)): ?>
-       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('list-berkas') ?>">
-          <span data-feather="layers"></span>
-         Berkas Santri
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('undangan-edit/1') ?>">
-          <span data-feather="edit-2"></span>
-           Edit Undangan
-        </a>
-      </li>
-    <?php endif;?>
-    </ul>
-  </div>
-</nav>
+<div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav-light bg-white" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <div class="sb-sidenav-menu-heading">Core</div>
+            <a class="nav-link" href="<?= base_url('admin') ?>">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+              Dashboard
+            </a>
+            <a class="nav-link collapsed" href="" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+              <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+              Santri
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="<?= base_url('admin/santri') ?>"> Data Santri</a>
+                <a class="nav-link" href="<?= base_url('admin/orang-tua') ?>">Orang Tua</a>
+                <a class="nav-link" href="<?= base_url('admin/sekolah-asal') ?>">Sekolah Asal</a>
+              </nav>
+            </div>
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+              <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+              Pages
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                  Authentication
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                  <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="register.html">Register</a>
+                    <a class="nav-link" href="password.html">Forgot Password</a>
+                  </nav>
+                </div>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                  Error
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                  <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="401.html">401 Page</a>
+                    <a class="nav-link" href="404.html">404 Page</a>
+                    <a class="nav-link" href="500.html">500 Page</a>
+                  </nav>
+                </div>
+              </nav>
+            </div>
+            <div class="sb-sidenav-menu-heading">Addons</div>
+            <a class="nav-link" href="charts.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+              Charts
+            </a>
+            <a class="nav-link" href="tables.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+              Tables
+            </a>
+          </div>
+        </div>
+
+      </nav>
+    </div>

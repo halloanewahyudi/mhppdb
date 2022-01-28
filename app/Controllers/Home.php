@@ -19,7 +19,7 @@ class Home extends BaseController
             if(!empty($data_santri) && user()->level != null){
                 return redirect()->to('santri/dashboard/'.user_id());
             }elseif(user()->level == null ){
-                return redirect()->to('admin/dashboard/'.user_id());
+                return redirect()->to('admin');
             }
             else{
                 return redirect()->to('santri/create/');

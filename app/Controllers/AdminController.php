@@ -24,21 +24,17 @@ class AdminController extends BaseController
     }
 
     public function index(){
-        
-    }
-    public function dashboard($id)
-    {
         $data = [
             'users' => $this->card('bg-info','Jumlah Santri', $this->user_model),
         ];
         return view('admin/index', $data);
     }
-
     public function santri(){
+        $users = $this->user_model->where('level',null)->join('santri','santri.user_id = users.id')->findAll();
         $data = [
             'judul'=>'Data Santri',
             'db'=>$this->db,
-            'santri'=> $this->user_model->findAll(),
+            'data_santri'=> $users,
         ];
         return view('admin/santri',$data);
     }

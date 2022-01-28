@@ -30,6 +30,7 @@
     <script src="<?= base_url(); ?>/assets/js/bouncer.polyfills.min.js"></script>
 <script src="<?= base_url(); ?>/assets/js/sweetalert2.all.min.js"></script>
 <script src="<?= base_url(); ?>/assets/js/feather.min.js"></script>
+<script src="<?= base_url(); ?>/assets/js/scripts.js"></script>
 <script src="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script>
 
