@@ -1,7 +1,9 @@
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-white">
   <!-- Navbar Brand-->
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"> <img src="<?= base_url('assets/img/mhlogo.jpg'); ?>" alt="" srcset="" width="40"> MINHAJUL HAQ</a>
+  <?php if(logged_in()):?>
   <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+  <?php endif; ?>
   <!-- Navbar-->
   <ul class="navbar-nav ms-auto me-3 me-lg-4">
     <?php if (logged_in()) : 

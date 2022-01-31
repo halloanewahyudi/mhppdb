@@ -16,7 +16,7 @@
   <div class="card mb-4">
     <div class="card-header">
       <i class="fas fa-table me-1"></i>
-      DataTable Example
+      <?= $judul; ?>
     </div>
     <div class="card-body table-responsive">
     <table id="datatablesSimple" class="table table-striped">
@@ -123,12 +123,6 @@
       return false;
     }
   );
-  //============== filter column
-  function filterColumn(i) {
-    $('#table').DataTable().column(i).search(
-      $('#col' + i + '_filter').val(),
-    ).draw();
-  }
 
   //===============
   // jquery
@@ -157,9 +151,7 @@
 
     });
     // end===
-    $('input.column_filter').on('keyup click change', function() {
-      filterColumn($(this).parents('.cs').attr('data-column'));
-    });
+  
     // get var t for date input
     $('#min, #max').on('change', function() {
       t.draw();

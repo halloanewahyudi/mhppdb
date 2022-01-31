@@ -39,6 +39,15 @@ class AdminController extends BaseController
         return view('admin/santri',$data);
     }
 
+    public function orang_tua(){
+        $users = $this->user_model->where('level',null)->join('ayah','ayah.user_id = users.id')->join('ibu','ibu.user_id = users.id')->findAll();
+        $data = [
+            'judul'=>'Data Orang Tua',
+            'data_orang_tua'=> $users,
+        ];
+        return view('admin/santri',$data);
+    }
+
     function jumlah($model)
     {
         return $model->countAll();
