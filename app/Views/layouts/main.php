@@ -12,14 +12,18 @@
   <link href="<?= base_url(); ?>/assets/css/styles.css" rel="stylesheet">
   <link href="<?= base_url(); ?>/assets/scss/ane.css" rel="stylesheet">
   <link href="<?= base_url(); ?>/assets/fontawesome/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/dataTables.dateTime.min.css">
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-  <script src="<?= base_url(); ?>/assets/js/dataTables.buttons.min.js"></script>
+  <script src="<?= base_url(); ?>/assets/js/jquery-3.6.0.min.js"></script>>
+  <script src="<?= base_url(); ?>/assets/js/jquery.dataTables.min.js"></script>
+   <script src="<?= base_url(); ?>/assets/js/dataTables.buttons.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/dataTables.bootstrap5.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/buttons.html5.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/jszip.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/moment.min.js"></script>
     <script src="<?= base_url(); ?>/assets/js/dataTables.dateTime.min.js"></script>
   <script src="<?= base_url(); ?>/assets/js/axios.min.js"></script>
+  
 
 
 <body class="sb-nav-fixed bg-light">
@@ -60,8 +64,7 @@
 
     // datepicker
     $('.datepicker').datepicker({
-      format: 'dd/mm/yyyy',
-      startDate: '-3d'
+      format: 'dd/mm/yyyy'
     });
   </script>
 </body>

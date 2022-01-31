@@ -30,22 +30,50 @@ class AdminController extends BaseController
         return view('admin/index', $data);
     }
     public function santri(){
-        $users = $this->user_model->where('level',null)->join('santri','santri.user_id = users.id')->findAll();
+       $santri_model = $this->db->table('users')
+       ->select('*')
+        ->select('users.id as uid, users.created_at as use_created')
+        ->where('level is NOT NULL')
+       ->join('santri','santri.user_id = users.id')
+       ->orderBy('nama','DESC')
+       ->get()->getResultArray();
+
         $data = [
             'judul'=>'Data Santri',
             'db'=>$this->db,
-            'data_santri'=> $users,
+            'data_santri'=> $santri_model,
         ];
         return view('admin/santri',$data);
     }
 
     public function orang_tua(){
-        $users = $this->user_model->where('level',null)->join('ayah','ayah.user_id = users.id')->join('ibu','ibu.user_id = users.id')->findAll();
+        $orang_tua = $this->db->table('ayah')
+        ->select('*')
+        ->join('users','ayah.user_id = users.id')
+        ->join('ibu','ibu.user_id = users.id')
+        ->orderBy('users.id','DESC')
+        ->where('users.level is NOT NULL')
+        ->get()->getResultArray();
         $data = [
             'judul'=>'Data Orang Tua',
-            'data_orang_tua'=> $users,
+            'data_orang_tua'=> $orang_tua,
         ];
-        return view('admin/santri',$data);
+        return view('admin/orang-tua',$data);
+    }
+
+    public function sekolah_asal(){
+        $data_sakolah_asal = $this->db->table('sekolah_asal')
+        ->select('*')
+        ->join('users','sekolah_asal.user_id = users.id')
+        ->join('santri','santri.user_id = users.id')
+        ->orderBy('users.id','DESC')
+        ->where('users.level is NOT NULL')
+        ->get()->getResultArray();
+        $data = [
+            'judul'=>'Data Sekolah Asal',
+            'data_sakolah_asal'=> $data_sakolah_asal,
+        ];
+        return view('admin/sekolah-asal',$data);
     }
 
     function jumlah($model)
